@@ -1,0 +1,227 @@
+main > .FormWizard:first-child {
+  margin-top: 15vh;
+}
+
+.FormWizard {
+  display: block;
+}
+
+.FormWizard > form {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.FormWizard > form > .input-col,
+.FormWizard > form > .details-col {
+  min-height: 460px;
+
+  vertical-align: middle;
+}
+/* begin left column */
+.FormWizard > form > .details-col { /* left column */
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 400px;
+  min-height: 460px;
+  color: #fff;
+  padding: 70px 50px 30px;
+  box-sizing: border-box;
+  background: #662d91;
+  text-align: center;
+
+}
+
+.FormWizard > form > .details-col > h2 {
+  font-weight: 300;
+  color: #fff;
+  margin: 15px 0;
+  padding: 0;
+  font-size: 36px;
+}
+
+.FormWizard > form > .details-col > p {}
+.FormWizard > form > .details-col > a { /* info icon link */
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+
+  color: #fff;
+  font-size: 18px;
+  width: 26px;
+  height: 26px;
+
+  border: 1px solid #fff;
+  border-radius: 50%;
+
+  transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+}
+.FormWizard > form > .details-col > a:hover {
+  color: #662d91;
+  background: #fff;
+}
+
+/* begin right column */
+.FormWizard > form > .input-col { /* right column */
+  width: calc(100% - 400px);
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+  background: #fff;
+}
+.FormWizard > form > .input-col > .progress-bar {
+  height: 5px;
+  background: #6C3;
+}
+
+.FormWizard > form > .input-col > .input-area {
+  padding: 30px 30px 120px;
+}
+
+.FormWizard > form > .input-col > .input-area > .progress-counter {
+  color: #999;
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+
+.FormWizard > form > .input-col > .input-area h3 {
+  color: #222;
+  margin: 0 0 20px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+/* form alerts area */
+.form-alerts-area {
+  position: absolute;
+  top: 0; right: 0;
+  width: 100%;
+}
+
+/* buttons/nav area */
+.FormWizard > form > .input-col > .input-area > .nav-area {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+
+  text-align: right;
+}
+.FormWizard > form > .input-col button {
+  padding: 10px 20px;
+  border: none;
+  outline: 0;
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 3px;
+  line-height: 1;
+  background: #0073b9;
+
+  cursor: pointer;
+  margin-right: 5px;
+
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+.FormWizard > form > .input-col button.print,
+.FormWizard > form > .input-col > .input-area > .nav-area > button.back {
+  color: #333;
+  background: #e8e8e8;
+  padding-left: 30px;
+}
+.FormWizard > form > .input-col button.print { float: right; background: #409fff; color: #fff; padding-left: 20px; }
+.FormWizard > form > .input-col > .input-area > .nav-area > button.next {
+  color: #fff;
+  background: #81b342;
+  padding-right: 30px;
+}
+.FormWizard > form > .input-col > .input-area > .nav-area > button:hover {
+  background: #333;
+  color: #fff;
+}
+.FormWizard > form > .input-col button.print:hover { background: #0073e5; }
+.FormWizard > form > .input-col button:before {
+  top: 8px;
+  font-size: 18px;
+  position: absolute;
+  font-family: ElegantIcons;
+  top: 0.425em;
+}
+.FormWizard > form > .input-col > .input-area > .nav-area > button.back:before {
+  content: "\34";
+  left: 12px;
+}
+.FormWizard > form > .input-col > .input-area > .nav-area > button.next:before {
+  content: "\35";
+  right: 10px;
+}
+.FormWizard > form > .input-col > .input-area > .nav-area > button:last-of-type {
+  margin-right: 0;
+}
+
+.FormWizard > form > .input-col button.print:before {
+  content: "\e103";
+  left: 12px;
+}
+
+
+/* begin form wizard footer */
+.FormWizard > form > .footer:before {
+  display: block;
+  content: '';
+  clear: both;
+}
+.FormWizard > form > .footer {
+  margin-top: 30px;
+}
+
+.FormWizard > form > .footer > p {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.FormWizard > form > .footer > ul {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.FormWizard > form > .footer > ul > li {
+  display: inline-block;
+}
+.FormWizard > form > .footer > ul > li > a {
+  color: #777;
+  margin-left: 30px;
+}
+.FormWizard > form > .footer > ul > li > a:focus,
+.FormWizard > form > .footer > ul > li > a:hover {
+  color: #333;
+}
+
+
+
+@media (max-width: 1200px) {
+  main > .FormWizard:first-child {
+    margin-top: 0;
+  }
+  .FormWizard > form > .input-col,
+  .FormWizard > form > .details-col {
+    width: 100%;
+  }
+  .FormWizard > form > .footer {
+    padding: 0 30px 30px;
+  }
+  .FormWizard > form > .details-col > a {
+    top: 15px;
+    right: 15px;
+    left: auto;
+  }
+}

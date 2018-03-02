@@ -1,0 +1,27 @@
+.FormWizard .input-area input[type="number"]::-webkit-outer-spin-button,
+.FormWizard .input-area input[type="number"]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.FormWizard .input-area input[type="tel"],
+.FormWizard .input-area input[type="text"],
+.FormWizard .input-area input[type="email"],
+.FormWizard .input-area input[type="number"] {
+  border: none;
+  outline: none;
+  color: #bbb;
+  border-bottom: 2px solid #e8ebed;
+}
+.FormWizard .input-area input[type="tel"]:focus,
+.FormWizard .input-area input[type="text"]:focus,
+.FormWizard .input-area input[type="email"]:focus,
+.FormWizard .input-area input[type="number"]:focus {
+  color: #555;
+  border-bottom-color: #777;
+}
+
+.FormWizard .input-area input[type="tel"] {
+  font-size: 22px;
+}

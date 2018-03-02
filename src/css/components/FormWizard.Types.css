@@ -1,0 +1,73 @@
+
+label.radioBlock {
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+}
+label.radioBlock h1 {
+  color: #fff;
+}
+label.radioBlock input[type="radio"] {
+  display: none;
+}
+label.radioBlock input[type="radio"]:checked + .box {
+  background-color: #1cbbb4;
+}
+label.radioBlock input[type="radio"]:checked + .box span {
+  color: white;
+  transform: translateY(70px);
+}
+label.radioBlock input[type="radio"]:checked + .box span:before {
+  transform: translateY(-5px);
+  opacity: 1;
+}
+label.radioBlock .box {
+  width: 33.33%;
+  height: 180px;
+  background-color: #fff;
+  transition: all 250ms ease;
+  will-change: transition;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  font-weight: 900;
+}
+label.radioBlock .box:active {
+  transform: translateY(10px);
+}
+label.radioBlock .box span {
+  position: absolute;
+  transform: translate(0, 60px);
+  left: 0;
+  right: 0;
+  transition: all 300ms ease;
+  font-size: 1.5em;
+  user-select: none;
+  color: #007e90;
+}
+label.radioBlock .box span:before {
+  font-size: 1.2em;
+  font-family: "FontAwesome";
+  display: block;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  font-weight: normal;
+  color: white;
+}
+label.radioBlock input[value="bank"] + .box span:before {
+  content: '\f19c';
+}
+label.radioBlock input[value="phone"] + .box span:before {
+  content: '\f10b';
+  font-size: 2em;
+  line-height: 0.9;
+}
+label.radioBlock input[value="business"] + .box span:before {
+  content: '\f0f7';
+}
+label.radioBlock p {
+  color: #fff;
+  font-weight: 400;
+}
