@@ -1,5 +1,7 @@
 # React-Form-Wizard
-Basic form wizard made in React with modular sub-forms
+Basic form wizard made in React with modular sub-forms and extensive adaptability.
+
+![Preview of React-Form-Wizard by Dan Lindsey](https://i.imgur.com/i8k7SzS.png)
 
 ## States
 Simple and intuitive structure that stores all sub-form data for impromptu prefills.
