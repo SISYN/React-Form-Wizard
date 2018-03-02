@@ -32,41 +32,43 @@ There are 6 standard mutators belonging to the FormWizard parent which are passe
 ## Sub-Forms
 Setting up an array of sub-forms is easy. You can use the mutator callbacks to relay data to the parent Formwizard component.
 
-  constructor() {
-    super();
-    this.steps = [
-      this.Step1_SetFormType
-    ];
-  }
+    constructor() {
+       super();
+       this.steps = [
+         this.Step1_SetFormType
+       ];
+     }
 
-  componentWillMount() {
-    this.props.callbackButtonVisibility({
-      back: false
-    });
-    this.props.callbackSteps(this.steps.length);
-    this.props.callbackReady(false);
+     componentWillMount() {
+       this.props.callbackButtonVisibility({
+         back: false
+       });
+       this.props.callbackSteps(this.steps.length);
+       this.props.callbackReady(false);
 
-    // check for preset values in
+       // check for preset values in
 
-  }
+     }
 
-  trigger(e) {
-    return this.steps[this.props.rootState.step].bind(this)(e);
-  }
+     trigger(e) {
+       return this.steps[this.props.rootState.step].bind(this)(e);
+     }
 
-  back() {
-    alert('Nowhere to go but forward');
-  }
+     back() {
+       alert('Nowhere to go but forward');
+     }
 
-  submit() {
-    return this.trigger.bind(this)();
-  }
+     submit() {
+       return this.trigger.bind(this)();
+     }
 
 
-  Step1_SetFormType() {
-    return new Promise((resolve,reject)=>{
-      let selectedForm = $('input[type="radio"]:checked').val(); // using jQuery syntax for readability
-      this.props.callbackInput('_type', selectedForm);
-      this.props.callbackForm(selectedForm);
-    });
-  }
+     Step1_SetFormType() {
+       return new Promise((resolve,reject)=>{
+         let selectedForm = $('input[type="radio"]:checked').val(); // using jQuery syntax for readability
+         this.props.callbackInput('_type', selectedForm);
+         this.props.callbackForm(selectedForm);
+       });
+     }
+
+ 
